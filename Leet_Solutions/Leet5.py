@@ -1,4 +1,4 @@
-#LeetCode 5: Pow(x,n) (Did it on my own)
+#LeetCode 5: Pow(x,n)
 #Level: Medium
 import math
 class Solution(object):
