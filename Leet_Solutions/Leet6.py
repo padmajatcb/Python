@@ -1,4 +1,4 @@
-#LeetCode 6: Sqrt(x) (Used a gemini to help me on some concepts, but solved it!)
+#LeetCode 6: Sqrt(x) 
 #Level: Easy
 import math
 
