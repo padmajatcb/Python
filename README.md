@@ -7,7 +7,7 @@ LeetCode Problem practice solutions: 16 problems
 6. Leet6: Sqrt(x)
 7. Leet7: Majority Element
 8. Leet8:Merge Sorted Array
-9. Leet9:Single Array
+9. Leet9:Single Number
 10. Leet10:Excel sheet column Title
 11. Leet11:Self dividing nums
 12. Leet12:Valid Perfect Square
