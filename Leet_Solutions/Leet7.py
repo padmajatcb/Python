@@ -1,5 +1,6 @@
 # LeetCode 8: Majority element 
 # Level: Easy
+
 class Solution(object):
     def majorityElement(self, nums):
         counts = {}
