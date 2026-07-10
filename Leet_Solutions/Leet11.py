@@ -1,16 +1,30 @@
-# LeetCode 11: Excel Sheet Column Title
+# LeetCode 12: Self dividing numbers
 # Level: Easy
-class Solution(object):
-    def convertToTitle(self, columnNumber):
-        str_1 = {"a": 1, "b":2 , "c":3 , "d":4, "e":5, "f":6, "g":7, "h":8, "i":9, "j":10, "k":11, "l":12, "m":13, "n":14, "o":15, "p":16, "q":17, "r":18, "s":19, "t":20,
-                 "u": 21, "v":22, "w":23, "x":24, "y":25, "z":26}
-        for letter, number in str_1.items():
-            if columnNumber == number:
-                output = letter
+# Both left and right cannot have zero in their digits
+# Left from right should be perfectly divisible
+# If a number doesn't divide properly even though it doesn't have 0 in it, it's invalid
+# Left and right has to be inclusive
 
-                return output
+class Solution(object):
+    def selfDividingNumbers(self, left, right):
+        result_list = []
+
+        for lis_num in range(left, right + 1):
+
+            is_self_dividing = True
+
+            for digit_str in str(lis_num):
+                digit = int(digit_str)
+
+                if digit == 0 or lis_num % digit != 0:
+                    is_self_dividing = False
+                    break
+
+            if is_self_dividing:
+                result_list.append(lis_num)
+
+        return result_list
 
 sol = Solution()
-result = sol.convertToTitle(26)
+result = sol.selfDividingNumbers(1, 22)
 print("Output:", result)
-

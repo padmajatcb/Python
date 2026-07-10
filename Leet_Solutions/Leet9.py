@@ -1,23 +1,17 @@
-# LeetCode 9: Merge Sorted Array
+# LeetCode 10: Single Number
 # Level: Easy
 class Solution(object):
-    def merge(self, nums1, m, nums2, n):
-        # Replace the last 'n' elements (the zeros) with nums2
-        nums1[m:] = nums2
+    def singleNumber(self, nums):
+        count = 0
+        for i in range(len(nums)):
+            if nums.count(nums[i]) > 1:
+                count += 1
+            elif nums.count(nums[i]) == 1:
+                output = nums[i]
+                return output
 
-        # Sort the entire array in-place
-        nums1.sort()
+sol = Solution()
+nums = [4,1,2,1,2]
+result = sol.singleNumber(nums)
+print("Output:", result)
 
-
-runner = Solution()
-test_nums1 = [1, 2, 3, 0, 0, 0]
-test_m = 3
-test_nums2 = [2, 5, 6]
-test_n = 3
-runner.merge(test_nums1, test_m, test_nums2, test_n)
-
-
-#nums1 and nums2 are sorted in an non-decreasing order
-#n and m represents the num of elements in nums1 and nums2
-#Task: Merge nums1 and nums2 into a single array sorted in non-decreasing order
-#You cannot create a new array

@@ -1,17 +1,23 @@
-# LeetCode 15: Is Subsequence
+# LeetCode 16: Find Common Characters
 # Level: Easy
 class Solution(object):
-    def isSubsequence(self, s, t):
-        count_one = 0
-        count_two = 0
-        while count_one < len(s) and count_two < len(t):
-            if s[count_one] == t[count_two]:
-               count_one+=1
+    def commonChars(self, words):
+        output = []
+        character = ['a', 'b', 'c', 'd', "e", 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
+                     'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+        for i in range(len(words)):
+            for j in range(len(character)):
+                if character[j] in words[i]:
+                    output.append(character[j])
 
-            count_two += 1
 
-        return count_one == len(s)
+
+            return output
 
 sol = Solution()
-result = sol.isSubsequence("axc", "ahbgdc")
+result = sol.commonChars(["bella","label","roller"])
 print("Output:", result)
+
+
+
+

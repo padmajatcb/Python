@@ -1,27 +1,23 @@
-# LeetCode 8: Majority element - With the help of gemini, but I understood it!
+# LeetCode 9: Merge Sorted Array
 # Level: Easy
-#Took a while to do this since there was one error showing up presistently
 class Solution(object):
-    def majorityElement(self, nums):
-        counts = {}
-        threshold = len(nums) / 2
-        for num in nums:
-            counts[num] = counts.get(num, 0) + 1
-            if counts[num] > threshold:
-                return num
+    def merge(self, nums1, m, nums2, n):
+        # Replace the last 'n' elements (the zeros) with nums2
+        nums1[m:] = nums2
 
-sol = Solution()
-nums = [2,2,1,1,1,2,2]
-result = sol.majorityElement(nums)
-print("Output:", result)
+        # Sort the entire array in-place
+        nums1.sort()
 
-# The min number of times an element
-# must appear to be considered the majority choice
 
-# len(nums) - Counts total num of items in list
-# /2 - Splits that total exactly in half
+runner = Solution()
+test_nums1 = [1, 2, 3, 0, 0, 0]
+test_m = 3
+test_nums2 = [2, 5, 6]
+test_n = 3
+runner.merge(test_nums1, test_m, test_nums2, test_n)
 
-# The problem states that a majority element must appear more than
-# [n / 2] times. Therefore, the threshold acts like a finish line.
-# As you count how many times a number shows up, you compare it
-# to this threshold to see if it won.
+
+#nums1 and nums2 are sorted in an non-decreasing order
+#n and m represents the num of elements in nums1 and nums2
+#Task: Merge nums1 and nums2 into a single array sorted in non-decreasing order
+#You cannot create a new array
