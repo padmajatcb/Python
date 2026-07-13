@@ -1,4 +1,4 @@
-#LeetCode 4: Multiply Strings (First time: Did it on my own)
+#LeetCode 4: Multiply Strings
 #Level: Medium
 class Solution(object):
     def multiply(self, num1, num2):
