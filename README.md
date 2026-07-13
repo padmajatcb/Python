@@ -1,4 +1,4 @@
-LeetCode Problem practice solutions: 16 problems
+LeetCode Problem practice solutions: 16 problems + A project
 1. Leet1: Guessing Game
 2. Leet2: Length of Longest substring
 3. Leet3: Longest Palindromic substance
@@ -15,3 +15,4 @@ LeetCode Problem practice solutions: 16 problems
 14. Leet14:Is subsequence
 15. Leet15:Find common characters
 16. Leet16:Fibonacci sequence
+17. A fake news headline generator: Mini Project
